@@ -1,0 +1,32 @@
+Usuario
+ ├── nombre: str
+ ├── carnet: str
+ ├── correo: str
+ └── mostrar_info()
+
+Estudiante : Usuario
+ ├── cursos_inscritos: list
+ └── inscribir_curso(curso), ver_notas()
+
+Instructor : Usuario
+ ├── cursos_impartidos: list
+ └── crear_curso(nombre, codigo)
+
+Curso
+ ├── nombre: str
+ ├── codigo: str
+ ├── instructor: Instructor
+ ├── estudiantes: list
+ ├── evaluaciones: list
+ └── agregar_estudiante(), agregar_evaluacion()
+
+Evaluacion
+ ├── tipo: str
+ ├── fecha: str
+ ├── calificaciones: dict
+ └── registrar_calificacion(estudiante, nota)
+
+GestorPlataforma
+ ├── usuarios: dict
+ ├── cursos: dict
+ └── registrar_usuario(), registrar_curso(), buscar_usuario(), buscar_curso()
